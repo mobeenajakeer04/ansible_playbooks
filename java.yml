@@ -13,6 +13,4 @@
       line: JAVA_HOME="/usr/lib/jvm/java-8-openjdk-amd64"
       create: yes
   - name: source the path 
-    command: 
-      cmd: source /etc/environment 
-    
+    command: source /etc/environment   
