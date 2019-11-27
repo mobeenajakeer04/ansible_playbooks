@@ -1,0 +1,10 @@
+---
+- hosts: all
+  tasks:
+  - name: install java8 on ubuntu
+    apt: 
+      name: openjdk-8-jdk
+      cache_update: yes
+      state: present
+    become: yes
+
