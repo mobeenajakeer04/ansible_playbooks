@@ -14,5 +14,5 @@
       create: yes
   - name: source the path 
     command: source /etc/environment
-      args:
-        chdir: /etc/environment   
+    args:
+      chdir: /etc/environment   
