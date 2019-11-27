@@ -1,12 +1,21 @@
 ---
 - hosts: all
-  become: yes
+  become: yes  
   tasks:
   - name: install java8 on ubuntu
-    apt: 
+    apt:
       name: openjdk-8-jdk
       update_cache: yes
       state: present
+    when: ansible_os_family == "Debian"
+  
+  - name: install java8 on RedHat
+    yum:
+      name: java-1.8.0-openjdk-devel
+      state: present
+    when: ansible_os_family == "RedHat"
+
+
   - name: set the java path
     lineinfile:
       path: /etc/environment
