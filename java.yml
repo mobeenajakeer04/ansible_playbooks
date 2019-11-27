@@ -4,7 +4,7 @@
   - name: install java8 on ubuntu
     apt: 
       name: openjdk-8-jdk
-      cache_update: yes
+      update_cache: yes
       state: present
     become: yes
 
