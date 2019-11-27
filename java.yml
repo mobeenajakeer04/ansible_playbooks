@@ -12,4 +12,5 @@
       path: /etc/environment
       line: JAVA_HOME="/usr/lib/jvm/java-8-openjdk-amd64"
       create: yes
+    become_user: ubuntu
     become: no
