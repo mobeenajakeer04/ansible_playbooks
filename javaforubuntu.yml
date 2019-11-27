@@ -1,0 +1,17 @@
+---
+- hosts: all
+  become: yes  
+  tasks:
+  - name: install java8 on ubuntu
+    apt:
+      name: openjdk-8-jdk
+      update_cache: yes
+      state: present
+      
+  - name: set the java path for ubuntu
+    lineinfile:
+      path: /etc/environment
+      line: JAVA_HOME="/usr/lib/jvm/java-8-opendjdk-amd64"
+      create: yes
+      validate: source /etc/environment -cf %s
+
