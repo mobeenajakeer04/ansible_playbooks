@@ -3,9 +3,8 @@
   become: yes  
   tasks:
   - name: install java8 on ubuntu
-    apt:
+    yum:
       name: java-1.8.0-openjdk-devel
-      update_cache: yes
       state: present
       
   - name: set the java path for ubuntu
